@@ -66,9 +66,7 @@ router.get('/home',(req,res)=>{
 })
 
 router.get('/jobs/:id', (req, res) => {
-    const jobId = req.params.id;
-    
-    // Find the job by ID from the static jobs array
+    const jobId = req.params.id;   
     const job = jobListings.find(job => job.id === jobId);
     
     if (job) {
@@ -77,5 +75,18 @@ router.get('/jobs/:id', (req, res) => {
       res.status(404).send('Job not found');
     }
   });
+
+  router.get('/userprofile', (req, res) => {
+    const user = {
+      name: 'John Doe',
+      email: 'john.doe@example.com',
+      location: 'New York, USA',
+      phone: '123-456-7890',
+      about: 'A passionate software developer.'
+    };
+  
+    res.render('userprofile', { user });
+  });
+  
 
 module.exports = router
