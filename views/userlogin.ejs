@@ -1,0 +1,32 @@
+<%- include('./partials/header')%>
+
+</head>
+<body class="d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card shadow-lg border-0 rounded-3">
+          <div class="card-body p-4">
+            <h3 class="text-center mb-4">User Login</h3>
+            <form action="/login" method="POST">
+              <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+              </div>
+              <button type="submit" class="btn btn-primary w-100">Login</button>
+            </form>
+            <p>don't have an account! <a href="" class="link">Sign up</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>

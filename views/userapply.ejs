@@ -1,0 +1,57 @@
+<%- include('./partials/header')%>
+
+  <style>
+    .card {
+      max-width: 800px;
+      margin: 40px auto;
+    }
+    .company-logo {
+      max-height: 80px;
+      object-fit: contain;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <%- include('./partials/user_navbar')%>
+
+
+  <!-- Job Details Card -->
+  <div class="container">
+    <div class="card shadow-lg">
+      <div class="card-header bg-primary text-white">
+        <h2 class="card-title"><%= job.title %></h2>
+        <p class="mb-0"><strong>Company:</strong> <%= job.companyName %></p>
+      </div>
+      <div class="card-body">
+
+        <h5 class="mb-3">Job Details</h5>
+        <ul class="list-unstyled">
+          <li><strong>Location:</strong> <%= job.location %></li>
+          <li><strong>Salary:</strong> <%= job.salary %></li>
+          <li><strong>Posted on:</strong> <%= new Date(job.postDate).toLocaleDateString() %></li>
+          <li><strong>Application Deadline:</strong> <%= new Date(job.deadline).toLocaleDateString() %></li>
+        </ul>
+        
+        <h5 class="mt-4">Job Description</h5>
+        <p><%= job.description %></p>
+
+        <h5 class="mt-4">Requirements</h5>
+        <ul>
+          <% job.requirements.forEach(requirement => { %>
+            <li><%= requirement %></li>
+          <% }); %>
+        </ul>
+
+        <!-- Apply Button -->
+        <form action="/apply/<%= job.id %>" method="POST" class="mt-4">
+          <button type="submit" class="btn btn-success w-100">Apply Now</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
