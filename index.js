@@ -9,6 +9,7 @@ const PORT = 5000
 const app = express()
 app.set('view engine','ejs')
 
+
 app.use('/user',userRoutes)
 app.use('/company',companyRoutes)
 

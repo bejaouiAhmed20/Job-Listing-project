@@ -5,6 +5,9 @@ const router = express.Router()
 router.get('/login',(req,res)=>{
     res.render('companylogin')
 })
+router.get('/addjoboffer',(req,res)=>{
+    res.render('addjoboffer')
+})
 router.get('/signup',(req,res)=>{
     res.render('companysignup')
 })

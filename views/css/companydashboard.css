@@ -1,0 +1,84 @@
+
+    /* General page styling */
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+   
+
+    /* Main content styling */
+    .main-content {
+      margin-left: 250px;
+      padding: 30px;
+    }
+
+    .container {
+      max-width: 1200px;
+    }
+
+    table th {
+      text-align: center;
+    }
+
+    table td {
+      text-align: center;
+    }
+
+    /* Button spacing */
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+
+    /* Table Design */
+    .table-striped tbody tr:nth-of-type(odd) {
+      background-color: #f9f9f9;
+    }
+
+    /* Outlined and larger buttons */
+    .btn-outline {
+      font-size: 18px;
+      padding: 10px 20px;
+      border-width: 2px;
+    }
+
+    .btn-outline-success {
+      border-color: #28a745;
+      color: #28a745;
+    }
+
+    .btn-outline-success:hover {
+      background-color: #28a745;
+      color: white;
+    }
+
+    .btn-outline-info {
+      border-color: #17a2b8;
+      color: #17a2b8;
+    }
+
+    .btn-outline-info:hover {
+      background-color: #17a2b8;
+      color: white;
+    }
+
+    .btn-outline-warning {
+      border-color: #ffc107;
+      color: #ffc107;
+    }
+
+    .btn-outline-warning:hover {
+      background-color: #ffc107;
+      color: white;
+    }
+
+    .btn-outline-danger {
+      border-color: #dc3545;
+      color: #dc3545;
+    }
+
+    .btn-outline-danger:hover {
+      background-color: #dc3545;
+      color: white;
+    }
